@@ -11,6 +11,11 @@ public class Main {
     myList.addNode(69);
     myList.display();
     System.out.println(myList.size());
+    myList.addNode(5, 42);
+    myList.display();
+    System.out.println(myList.getFirst());
+    System.out.println(myList.getLast());
+
 
 
     }

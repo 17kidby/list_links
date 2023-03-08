@@ -2,7 +2,7 @@ package com.company;
 
 public class LinkedList {
     private Node head;
-    
+
 
     public LinkedList(){
         // making an empty list
@@ -40,6 +40,33 @@ public class LinkedList {
         current.setNext(newNode);
     }
 
+    public void addNode(int index, int n){
+        Node newNode = new Node(n);
+        Node current = head;
+        for (int i=0; i<index-2; i++){
+            current = current.getNext();
+        }
+        current.setNext(newNode);
+
+        while (current.getNext() != null){
+            current = current.getNext();
+        }
+    }
+
+    public int getFirst(){
+        Node current = head;
+        return head.getValue();
+    }
+
+    public int getLast(){
+        Node current = head;
+        while (current.getNext() != null){
+            current = current.getNext();
+        }
+        return(current.getValue());
+    }
+
+
     public void addFirst(int n){
         Node newNode = new Node(n);
         Node current = head;
@@ -62,6 +89,8 @@ public class LinkedList {
         return counter;
     }
 
+    public Node remove(int index){
 
+    }
 
 }
